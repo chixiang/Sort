@@ -14,6 +14,7 @@
 		BA36A8D01ED04F7300CA5D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA36A8CE1ED04F7300CA5D49 /* LaunchScreen.storyboard */; };
 		BA36A8DB1ED04F7300CA5D49 /* SortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA36A8DA1ED04F7300CA5D49 /* SortTests.swift */; };
 		BA36A8E61ED04F7300CA5D49 /* SortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA36A8E51ED04F7300CA5D49 /* SortUITests.swift */; };
+		BA36A8F51ED09F7800CA5D49 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA36A8F41ED09F7800CA5D49 /* Eureka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BA36A8E11ED04F7300CA5D49 /* SortUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SortUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA36A8E51ED04F7300CA5D49 /* SortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortUITests.swift; sourceTree = "<group>"; };
 		BA36A8E71ED04F7300CA5D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA36A8F41ED09F7800CA5D49 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA36A8F51ED09F7800CA5D49 /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				BA36A8D91ED04F7300CA5D49 /* SortTests */,
 				BA36A8E41ED04F7300CA5D49 /* SortUITests */,
 				BA36A8C31ED04F7300CA5D49 /* Products */,
+				BA36A8F31ED09F7700CA5D49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 			path = SortUITests;
 			sourceTree = "<group>";
 		};
+		BA36A8F31ED09F7700CA5D49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA36A8F41ED09F7800CA5D49 /* Eureka.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +147,7 @@
 				BA36A8BE1ED04F7300CA5D49 /* Sources */,
 				BA36A8BF1ED04F7300CA5D49 /* Frameworks */,
 				BA36A8C01ED04F7300CA5D49 /* Resources */,
+				BA36A8F61ED09FB100CA5D49 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +269,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA36A8F61ED09FB100CA5D49 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA36A8BE1ED04F7300CA5D49 /* Sources */ = {
@@ -418,6 +450,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 933VYF7A3B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sort/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chixiang.Sort;
@@ -431,6 +467,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 933VYF7A3B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sort/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chixiang.Sort;
@@ -516,6 +556,7 @@
 				BA36A8EC1ED04F7300CA5D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA36A8ED1ED04F7300CA5D49 /* Build configuration list for PBXNativeTarget "SortTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +565,7 @@
 				BA36A8EF1ED04F7300CA5D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA36A8F01ED04F7300CA5D49 /* Build configuration list for PBXNativeTarget "SortUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +574,7 @@
 				BA36A8F21ED04F7300CA5D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
