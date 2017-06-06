@@ -11,6 +11,8 @@ import Eureka
 
 class FieldViewController: FormViewController {
     
+    var itemString:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

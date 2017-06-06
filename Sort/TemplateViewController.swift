@@ -27,7 +27,14 @@ class TemplateViewController: FormViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FieldViewControllerSegue"{
+            let controller = segue.destination as! FieldViewController
+            controller.itemString = sender as? String
+        }
+    }
+    
     func add() {
-        
+        self.performSegue(withIdentifier: "FieldViewControllerSegue", sender: "newField")
     }
 }
