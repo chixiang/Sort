@@ -17,6 +17,8 @@
 		BA45F53D1EE5BCCB00B29B17 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA45F53C1EE5BCCB00B29B17 /* TemplateViewController.swift */; };
 		BA45F5401EE5C82E00B29B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA45F53E1EE5C82E00B29B17 /* Main.storyboard */; };
 		BA45F5421EE6F06500B29B17 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA45F5411EE6F06500B29B17 /* FieldViewController.swift */; };
+		BA45F5451EE841C700B29B17 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA45F5431EE841C700B29B17 /* Realm.framework */; };
+		BA45F5461EE841C700B29B17 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA45F5441EE841C700B29B17 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		BA45F53C1EE5BCCB00B29B17 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
 		BA45F53F1EE5C82E00B29B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA45F5411EE6F06500B29B17 /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
+		BA45F5431EE841C700B29B17 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		BA45F5441EE841C700B29B17 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA45F5451EE841C700B29B17 /* Realm.framework in Frameworks */,
+				BA45F5461EE841C700B29B17 /* RealmSwift.framework in Frameworks */,
 				BA36A8F51ED09F7800CA5D49 /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +144,8 @@
 		BA36A8F31ED09F7700CA5D49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA45F5431EE841C700B29B17 /* Realm.framework */,
+				BA45F5441EE841C700B29B17 /* RealmSwift.framework */,
 				BA36A8F41ED09F7800CA5D49 /* Eureka.framework */,
 			);
 			name = Frameworks;
@@ -284,6 +292,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
