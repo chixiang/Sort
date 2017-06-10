@@ -52,15 +52,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = UINavigationController(rootViewController: TemplateListViewController(style: .plain))
-//        window?.makeKeyAndVisible()
-//        return true
-//    }
+    //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    //        window = UIWindow(frame: UIScreen.main.bounds)
+    //        window?.rootViewController = UINavigationController(rootViewController: TemplateListViewController(style: .plain))
+    //        window?.makeKeyAndVisible()
+    //        return true
+    //    }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        // Take a look at Main.storyboard
+    //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    //        // Take a look at Main.storyboard
+    //        return true
+    //    }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let template1 = Template(templateName: "测试模版一",
+                                templateFields: [TemplateField(fieldName: "栏位一",
+                                                               fieldType: "Text",
+                                                               fieldItems: [FieldItem(itemName: "item1")])])
+        let template2 = Template(templateName: "测试模版二",
+                                templateFields: [TemplateField(fieldName: "栏位二",
+                                                               fieldType: "Text",
+                                                               fieldItems: [FieldItem(itemName: "item2")])])
+        let viewModel = TemplateListViewController.ViewModel(templates: [template1, template2])
+        let templateListViewController = TemplateListViewController(viewModel: viewModel)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let navigationController = UINavigationController(rootViewController: templateListViewController)
+        window?.backgroundColor = .black
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 237.0/255, green: 76/255, blue: 119/255, alpha: 1)
+        UINavigationBar.appearance().isTranslucent = false
+        let navigationTitleAttributes: [String: Any] = {
+            return [ NSForegroundColorAttributeName: UIColor.white ]
+        }()
+        UINavigationBar.appearance().tintColor = .white
+        UIBarButtonItem.appearance().setTitleTextAttributes(navigationTitleAttributes, for: .normal)
+        UINavigationBar.appearance().titleTextAttributes = navigationTitleAttributes
+        
         return true
     }
 }

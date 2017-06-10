@@ -13,12 +13,15 @@
 		BA36A8D01ED04F7300CA5D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA36A8CE1ED04F7300CA5D49 /* LaunchScreen.storyboard */; };
 		BA36A8DB1ED04F7300CA5D49 /* SortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA36A8DA1ED04F7300CA5D49 /* SortTests.swift */; };
 		BA36A8E61ED04F7300CA5D49 /* SortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA36A8E51ED04F7300CA5D49 /* SortUITests.swift */; };
-		BA36A8F51ED09F7800CA5D49 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA36A8F41ED09F7800CA5D49 /* Eureka.framework */; };
 		BA45F53D1EE5BCCB00B29B17 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA45F53C1EE5BCCB00B29B17 /* TemplateViewController.swift */; };
 		BA45F5401EE5C82E00B29B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA45F53E1EE5C82E00B29B17 /* Main.storyboard */; };
 		BA45F5421EE6F06500B29B17 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA45F5411EE6F06500B29B17 /* FieldViewController.swift */; };
-		BA45F5451EE841C700B29B17 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA45F5431EE841C700B29B17 /* Realm.framework */; };
-		BA45F5461EE841C700B29B17 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA45F5441EE841C700B29B17 /* RealmSwift.framework */; };
+		BA876D201EEB0705006E98F3 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA36A8F41ED09F7800CA5D49 /* Eureka.framework */; };
+		BA876D241EEBDF08006E98F3 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876D231EEBDF08006E98F3 /* Template.swift */; };
+		BA876D271EEBE45A006E98F3 /* TemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876D261EEBE45A006E98F3 /* TemplateViewModel.swift */; };
+		BA876D291EEBE590006E98F3 /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876D281EEBE590006E98F3 /* FieldViewModel.swift */; };
+		BA876D2B1EEBEFE5006E98F3 /* TemplateListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876D2A1EEBEFE5006E98F3 /* TemplateListViewModel.swift */; };
+		BA876D2E1EEC325D006E98F3 /* TemplateListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876D2D1EEC325D006E98F3 /* TemplateListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,11 @@
 		BA45F5411EE6F06500B29B17 /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
 		BA45F5431EE841C700B29B17 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		BA45F5441EE841C700B29B17 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		BA876D231EEBDF08006E98F3 /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		BA876D261EEBE45A006E98F3 /* TemplateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewModel.swift; sourceTree = "<group>"; };
+		BA876D281EEBE590006E98F3 /* FieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
+		BA876D2A1EEBEFE5006E98F3 /* TemplateListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateListViewModel.swift; sourceTree = "<group>"; };
+		BA876D2D1EEC325D006E98F3 /* TemplateListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA45F5451EE841C700B29B17 /* Realm.framework in Frameworks */,
-				BA45F5461EE841C700B29B17 /* RealmSwift.framework in Frameworks */,
-				BA36A8F51ED09F7800CA5D49 /* Eureka.framework in Frameworks */,
+				BA876D201EEB0705006E98F3 /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,10 +117,11 @@
 		BA36A8C41ED04F7300CA5D49 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				BA876D2C1EEC3248006E98F3 /* Views */,
 				BA36A8C51ED04F7300CA5D49 /* AppDelegate.swift */,
-				BA36A8C71ED04F7300CA5D49 /* TemplateListViewController.swift */,
-				BA45F53C1EE5BCCB00B29B17 /* TemplateViewController.swift */,
-				BA45F5411EE6F06500B29B17 /* FieldViewController.swift */,
+				BA876D251EEBE429006E98F3 /* View Models */,
+				BA876D221EEBDEF2006E98F3 /* Model */,
+				BA876D211EEBDED8006E98F3 /* View Controllers */,
 				BA45F53E1EE5C82E00B29B17 /* Main.storyboard */,
 				BA36A8CC1ED04F7300CA5D49 /* Assets.xcassets */,
 				BA36A8CE1ED04F7300CA5D49 /* LaunchScreen.storyboard */,
@@ -149,6 +156,42 @@
 				BA36A8F41ED09F7800CA5D49 /* Eureka.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA876D211EEBDED8006E98F3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA36A8C71ED04F7300CA5D49 /* TemplateListViewController.swift */,
+				BA45F53C1EE5BCCB00B29B17 /* TemplateViewController.swift */,
+				BA45F5411EE6F06500B29B17 /* FieldViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BA876D221EEBDEF2006E98F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA876D231EEBDF08006E98F3 /* Template.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BA876D251EEBE429006E98F3 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA876D2A1EEBEFE5006E98F3 /* TemplateListViewModel.swift */,
+				BA876D261EEBE45A006E98F3 /* TemplateViewModel.swift */,
+				BA876D281EEBE590006E98F3 /* FieldViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		BA876D2C1EEC3248006E98F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA876D2D1EEC325D006E98F3 /* TemplateListTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +335,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
@@ -308,10 +349,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA876D291EEBE590006E98F3 /* FieldViewModel.swift in Sources */,
+				BA876D241EEBDF08006E98F3 /* Template.swift in Sources */,
+				BA876D2B1EEBEFE5006E98F3 /* TemplateListViewModel.swift in Sources */,
 				BA36A8C81ED04F7300CA5D49 /* TemplateListViewController.swift in Sources */,
 				BA36A8C61ED04F7300CA5D49 /* AppDelegate.swift in Sources */,
 				BA45F53D1EE5BCCB00B29B17 /* TemplateViewController.swift in Sources */,
+				BA876D271EEBE45A006E98F3 /* TemplateViewModel.swift in Sources */,
 				BA45F5421EE6F06500B29B17 /* FieldViewController.swift in Sources */,
+				BA876D2E1EEC325D006E98F3 /* TemplateListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
